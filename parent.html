@@ -5,16 +5,25 @@
     <title>Parent Window</title>
   </head>
   <body>
-    <h1>Parent Window on Github.com</h1>
-    <p>
-      Send Message:
-      <button id="message_button">Hi there cross-domain iframe</button>
-    </p>
+    <h3 id="header-text">
+      <a
+        name="welcome-to-github-pages"
+        class="anchor"
+        href="#welcome-to-github-pages"
+        ><span class="octicon octicon-link"></span></a
+      >Hi, i'm a parent window hosted on
+    </h3>
+
+    <p>Send Message: <button id="message_button">Hi there iframe</button></p>
     <p>Got Message:</p>
     <div id="results"></div>
     <br />
 
     <script>
+      // Dynamically show the hostname
+      document.getElementById("header-text").innerText +=
+        " " + window.location.hostname;
+
       // addEventListener support for IE8
       function bindEvent(element, eventName, eventHandler) {
         if (element.addEventListener) {
@@ -31,7 +40,7 @@
       iframe.setAttribute("src", iframeSource);
       iframe.setAttribute("id", "the_iframe");
       iframe.style.width = 450 + "px";
-      iframe.style.height = 200 + "px";
+      iframe.style.height = 400 + "px";
       document.body.appendChild(iframe);
 
       // Send a message to the child iframe
