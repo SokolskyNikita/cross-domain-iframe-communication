@@ -62,8 +62,9 @@
             name="welcome-to-github-pages"
             class="anchor"
             href="#welcome-to-github-pages"
+            id="header-text"
             ><span class="octicon octicon-link"></span></a
-          >Hi, i'm a parent window hosted on Github.com
+          >Hi, i'm a parent window hosted on
         </h3>
 
         <p>
@@ -74,6 +75,10 @@
         <br />
 
         <script>
+          // Dynamically show the hostname
+          document.getElementById("header-text").innerHTML +=
+            window.location.hostname;
+
           // addEventListener support for IE8
           function bindEvent(element, eventName, eventHandler) {
             if (element.addEventListener) {
@@ -120,7 +125,7 @@
       <footer>
         <p>
           This project is maintained by
-          <a href="https://github.com/pbojinov">pbojinov</a>
+          <a href="https://github.com/SokolskyNikita">SokolskyNikita</a>
         </p>
         <p>
           <small
