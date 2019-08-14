@@ -1,6 +1,8 @@
 # Two way cross domain iframe communication
 
-Seamless communication between a parent page on one domain and an iframe on a different domain. Forked from [@pbojinov's work](https://github.com/pbojinov/iframe-communication) originally, as it only had a single domain example.
+Seamless communication between a parent page on one domain and an iframe on a different domain. It relies on [window.postMessage()](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) and works in IE11 and all modern browsers.
+
+Forked from [@pbojinov's work](https://github.com/pbojinov/iframe-communication) originally, as it only had a single domain example.
 
 ## Demo
 
