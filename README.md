@@ -1,6 +1,6 @@
-# Two way iframe communication
+# Two way cross domain iframe communication
 
-Seamless communication between an iframe and a parent page.
+Seamless communication between a parent page on one domain and an iframe on a different domain. Forked from [@pbojinov's work](https://github.com/pbojinov/iframe-communication) originally, as it only had a single domain example.
 
 ## Demo
 
