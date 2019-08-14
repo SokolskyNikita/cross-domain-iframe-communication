@@ -4,9 +4,9 @@ Seamless communication between a parent page on one domain and an iframe on a di
 
 ## Demo
 
-[http://pbojinov.github.io/iframe-communication](http://pbojinov.github.io/iframe-communication/)
+[https://sokolskynikita.github.io/cross-domain-iframe-communication/](https://sokolskynikita.github.io/cross-domain-iframe-communication/)
 
-The main difference between the code in the two pages (parent and iframe) is the method of sending messages. Recieving messages is done using the same code.
+The main difference between the code in the two pages (parent and iframe) is the method of sending messages. Receiving messages is done using the same code.
 
 ### parent
 
