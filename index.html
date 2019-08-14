@@ -15,21 +15,20 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>iframe-communication</h1>
-        <p>Basic two way iframe communication</p>
+        <h1>cross-domain-iframe-communication</h1>
+        <p>Two way iframe communication across separate domains. Forked from @pbojinov's <a href="https://github.com/pbojinov/iframe-communication">original single domain example</a></p>
 
-        <p class="view"><a href="https://github.com/pbojinov/iframe-communication">View the Project on GitHub <small>pbojinov/iframe-communication</small></a></p>
-
+        <p class="view"><a href="https://github.com/SokolskyNikita/cross-domain-iframe-communication/">View the Project on GitHub <small>SokolskyNikita/cross-domain-iframe-communication</small></a></p>
 
         <ul>
-          <li><a href="https://github.com/pbojinov/iframe-communication/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/pbojinov/iframe-communication/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/pbojinov/iframe-communication">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/SokolskyNikita/cross-domain-iframe-communication/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/SokolskyNikita/cross-domain-iframe-communication/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/SokolskyNikita/cross-domain-iframe-communication/">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section id="main-content">
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Hi, i'm a parent window.</h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Hi, i'm a parent window hosted on Github.com</h3>
 
     <p>Send Message: <button id="message_button">Hi there iframe</button></p>
     <p>Got Message:</p>
@@ -46,7 +45,7 @@
             }
         }
 
-        var iframeSource = 'iframe.html';
+        var iframeSource = 'https://cross-domain-iframe.nfshost.com/iframe.html';
 
         // Create the iframe
         var iframe = document.createElement('iframe');
@@ -86,6 +85,6 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+
   </body>
 </html>
