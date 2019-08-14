@@ -6,8 +6,8 @@
 </head>
 <body>
 
-    <h1>Parent Window</h1>
-    <p>Send Message: <button id="message_button">Hi there iframe</button></p>
+    <h1>Parent Window on Github.com</h1>
+    <p>Send Message: <button id="message_button">Hi there cross-domain iframe</button></p>
     <p>Got Message:</p>
     <div id="results"></div>
     <br/>
@@ -22,7 +22,7 @@
             }
         }
 
-        var iframeSource = 'iframe.html';
+        var iframeSource = 'https://cross-domain-iframe.nfshost.com/iframe.html';
 
         // Create the iframe
         var iframe = document.createElement('iframe');
