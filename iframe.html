@@ -11,12 +11,16 @@
     </style>
   </head>
   <body>
-    <h1>Hello there, i'm an iframe hosted on Nfshost.com</h1>
+    <h1 id="iframe-header">Hello there, i'm an iframe hosted on</h1>
     <p>Send Message: <button id="message_button">Hi parent</button></p>
     <p>Got Message:</p>
     <div id="results"></div>
 
     <script>
+      // Dynamically show the hostname
+      document.getElementById("iframe-header").innerText +=
+        " " + window.location.hostname;
+
       // addEventListener support for IE8
       function bindEvent(element, eventName, eventHandler) {
         if (element.addEventListener) {

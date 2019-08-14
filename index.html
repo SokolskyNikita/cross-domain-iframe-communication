@@ -57,12 +57,11 @@
         </ul>
       </header>
       <section id="main-content">
-        <h3>
+        <h3 id="header-text">
           <a
             name="welcome-to-github-pages"
             class="anchor"
             href="#welcome-to-github-pages"
-            id="header-text"
             ><span class="octicon octicon-link"></span></a
           >Hi, i'm a parent window hosted on
         </h3>
@@ -77,7 +76,7 @@
         <script>
           // Dynamically show the hostname
           document.getElementById("header-text").innerText +=
-            window.location.hostname;
+            " " + window.location.hostname;
 
           // addEventListener support for IE8
           function bindEvent(element, eventName, eventHandler) {
