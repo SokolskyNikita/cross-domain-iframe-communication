@@ -17,8 +17,16 @@
         This document is hosted separately from the parent. It can message that
         parent, and nothing else.
       </p>
-      <p class="origin">This frame: <span id="self-origin"></span></p>
-      <p class="origin">Parent: <span id="peer-origin"></span></p>
+      <dl class="origins">
+        <div>
+          <dt>This frame</dt>
+          <dd id="self-origin"></dd>
+        </div>
+        <div>
+          <dt>Parent</dt>
+          <dd id="peer-origin"></dd>
+        </div>
+      </dl>
       <p id="status" role="status">Waiting for the parent…</p>
       <form id="send-form">
         <label for="message">Message</label>

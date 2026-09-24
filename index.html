@@ -18,10 +18,18 @@
         sends a text message with <code>postMessage</code>. The other page
         shows it only after checking the sender.
       </p>
-      <p class="origin">This page: <span id="self-origin"></span></p>
-      <p class="origin">Iframe: <span id="peer-origin"></span></p>
+      <dl class="origins">
+        <div>
+          <dt>This page</dt>
+          <dd id="self-origin"></dd>
+        </div>
+        <div>
+          <dt>Iframe</dt>
+          <dd id="peer-origin"></dd>
+        </div>
+      </dl>
       <div class="layout">
-        <section>
+        <section class="panel">
           <p id="status" role="status">Waiting for the iframe…</p>
           <form id="send-form">
             <label for="message">Message</label>
