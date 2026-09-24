@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Parent window</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; frame-src https://cross-domain-iframe.sokolx.workers.dev; base-uri 'none'; form-action 'none'"
+    />
+    <link rel="stylesheet" href="./demo.css" />
+  </head>
+  <body class="parent">
+    <main>
+      <h1>Parent window</h1>
+      <p class="lede">
+        This page and the frame beside it are on different origins. Each button
+        sends a text message with <code>postMessage</code>. The other page
+        shows it only after checking the sender.
+      </p>
+      <p class="origin">This page: <span id="self-origin"></span></p>
+      <p class="origin">Iframe: <span id="peer-origin"></span></p>
+      <div class="layout">
+        <section>
+          <p id="status" role="status">Waiting for the iframe…</p>
+          <form id="send-form">
+            <label for="message">Message</label>
+            <input id="message" name="message" maxlength="500" value="Hello from the parent" />
+            <button id="send" type="submit" disabled>Send to iframe</button>
+          </form>
+          <p class="log-title">Received</p>
+          <ol id="log" aria-live="polite">
+            <li class="empty">No messages yet.</li>
+          </ol>
+        </section>
+        <iframe id="child" title="Page on another origin" referrerpolicy="no-referrer"></iframe>
+      </div>
+    </main>
+    <script type="module" src="./parent.js"></script>
+  </body>
+</html>

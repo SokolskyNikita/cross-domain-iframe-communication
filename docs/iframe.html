@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iframe window</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <link rel="stylesheet" href="./demo.css" />
+  </head>
+  <body class="child">
+    <main>
+      <h1>Iframe window</h1>
+      <p class="lede">
+        This document is hosted separately from the parent. It can message that
+        parent, and nothing else.
+      </p>
+      <p class="origin">This frame: <span id="self-origin"></span></p>
+      <p class="origin">Parent: <span id="peer-origin"></span></p>
+      <p id="status" role="status">Waiting for the parent…</p>
+      <form id="send-form">
+        <label for="message">Message</label>
+        <input id="message" name="message" maxlength="500" value="Hello from the iframe" />
+        <button id="send" type="submit" disabled>Send to parent</button>
+      </form>
+      <p class="log-title">Received</p>
+      <ol id="log" aria-live="polite">
+        <li class="empty">No messages yet.</li>
+      </ol>
+    </main>
+    <script type="module" src="./iframe.js"></script>
+  </body>
+</html>

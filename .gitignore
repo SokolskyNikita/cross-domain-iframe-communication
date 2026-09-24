@@ -1,1 +1,5 @@
-commit_images
+.DS_Store
+.wrangler/
+.cloudflare/
+.dev.vars
+node_modules/

@@ -1,0 +1,154 @@
+:root {
+  color-scheme: light;
+  --ink: #241c16;
+  --paper: #f3efe6;
+  --line: #d9d0c3;
+  --accent: #1e4636;
+  --accent-ink: #f3efe6;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+body.child {
+  --paper: #7a241c;
+  --ink: #fff7f2;
+  --line: #ffffff33;
+  --accent: #fff7f2;
+  --accent-ink: #7a241c;
+  background: var(--paper);
+}
+
+main {
+  width: min(1080px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.5rem 0 2.5rem;
+}
+
+h1 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.lede {
+  margin: 0 0 1.25rem;
+  max-width: 38rem;
+}
+
+.origin {
+  margin: 0.15rem 0;
+  font-size: 0.95rem;
+}
+
+.origin span {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.86rem;
+}
+
+.layout {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 960px) {
+  body.parent .layout {
+    grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+form {
+  display: grid;
+  gap: 0.45rem;
+  margin: 1rem 0;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+input {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  background: transparent;
+  color: inherit;
+}
+
+button {
+  min-height: 2.75rem;
+  padding: 0.55rem 0.9rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+#status {
+  min-height: 1.4em;
+  font-weight: 700;
+}
+
+.log-title {
+  margin: 1rem 0 0.35rem;
+  font-weight: 700;
+}
+
+ol {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin: 0.35rem 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+li.empty {
+  list-style: none;
+  margin-left: -1.2rem;
+  opacity: 0.8;
+}
+
+iframe {
+  width: 100%;
+  min-height: 28rem;
+  border: 1px solid #c9b8a4;
+  border-radius: 0.5rem;
+  background: #7a241c;
+}
+
+a {
+  color: inherit;
+}

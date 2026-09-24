@@ -1,0 +1,18 @@
+{
+  "name": "cross-domain-iframe-communication",
+  "private": true,
+  "type": "module",
+  "description": "Two-way postMessage between a page and an iframe on another origin.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "deploy:iframe": "cf deploy"
+  },
+  "devDependencies": {
+    "cf": "^0.13.0",
+    "wrangler": "^4.138.0"
+  }
+}

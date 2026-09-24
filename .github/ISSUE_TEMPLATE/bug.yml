@@ -1,0 +1,18 @@
+name: Bug
+description: Something in the demo does not work
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you clicked, what you expected, and what you saw.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: Chrome 140, Safari 18
+    validations:
+      required: true
