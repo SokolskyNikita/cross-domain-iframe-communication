@@ -6,7 +6,7 @@ import {
   PARENT_ORIGIN,
   createTextMessage,
   readMessage,
-} from "../protocol.js";
+} from "../docs/js/protocol.js";
 
 const source = {};
 
@@ -73,10 +73,10 @@ test("accepts a ready handshake only from the parent origin", () => {
 
 test("demo scripts never use a wildcard target or innerHTML", () => {
   for (const file of [
-    "parent.js",
-    "iframe.js",
-    "index.html",
-    "iframe.html",
+    "docs/js/parent.js",
+    "docs/js/iframe.js",
+    "docs/index.html",
+    "docs/iframe.html",
   ]) {
     const contents = readFileSync(new URL(`../${file}`, import.meta.url), "utf8");
     assert.equal(contents.includes('"*")'), false, file);

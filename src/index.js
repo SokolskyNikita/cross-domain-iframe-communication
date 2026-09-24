@@ -1,7 +1,7 @@
-import demoCss from "../demo.css";
-import iframeHtml from "../iframe.html";
-import iframeJs from "../iframe.js";
-import protocolJs from "../protocol.js";
+import demoCss from "../docs/css/demo.css";
+import iframeHtml from "../docs/iframe.html";
+import iframeJs from "../docs/js/iframe.js";
+import protocolJs from "../docs/js/protocol.js";
 
 const DEMO_URL =
   "https://sokolskynikita.github.io/cross-domain-iframe-communication/";
@@ -17,15 +17,15 @@ const files = {
       "x-content-type-options": "nosniff",
     },
   },
-  "/iframe.js": {
+  "/js/iframe.js": {
     body: iframeJs,
     headers: { "content-type": "text/javascript; charset=utf-8" },
   },
-  "/protocol.js": {
+  "/js/protocol.js": {
     body: protocolJs,
     headers: { "content-type": "text/javascript; charset=utf-8" },
   },
-  "/demo.css": {
+  "/css/demo.css": {
     body: demoCss,
     headers: { "content-type": "text/css; charset=utf-8" },
   },

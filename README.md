@@ -9,7 +9,7 @@ A parent page and an iframe on a different origin exchange text messages with [`
 | Parent | `https://sokolskynikita.github.io` |
 | Iframe | `https://cross-domain-iframe.sokolx.workers.dev` |
 
-`index.html` is the parent page. `iframe.html` is the framed page. The Worker serves `iframe.html`, `iframe.js`, `protocol.js`, and `demo.css` from this folder. `src/index.js` redirects the Worker homepage to the demo.
+GitHub Pages publishes `docs/`. The parent is `docs/index.html`. The framed page is `docs/iframe.html`. Scripts are in `docs/js/`, styles in `docs/css/`. The Worker serves the iframe files from those same paths. `src/index.js` redirects the Worker homepage to the demo.
 
 The parent sends with `iframe.contentWindow.postMessage(message, iframeOrigin)`. The iframe sends with `window.parent.postMessage(message, parentOrigin)`. A message is shown only when the event is trusted, the origin and window are the expected peer, and the payload is a short string. Received text is inserted with `textContent`.
 
