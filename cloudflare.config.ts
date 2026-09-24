@@ -9,10 +9,5 @@ export default {
       enabled: true,
       headSamplingRate: 1,
     },
-    assets: {
-      notFoundHandling: "none",
-      htmlHandling: "none",
-      runWorkerFirst: ["/", "/index.html"],
-    },
   },
 };

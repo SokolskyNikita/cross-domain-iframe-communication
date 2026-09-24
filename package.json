@@ -3,7 +3,6 @@
   "private": true,
   "type": "module",
   "description": "Two-way postMessage between a page and an iframe on another origin.",
-  "license": "MIT",
   "engines": {
     "node": ">=22"
   },

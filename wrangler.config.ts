@@ -1,3 +1,9 @@
 export default {
-  assetsDirectory: "./docs",
+  rules: [
+    {
+      type: "Text",
+      globs: ["**/*.html", "**/*.css", "**/iframe.js", "**/protocol.js"],
+      fallthrough: false,
+    },
+  ],
 };

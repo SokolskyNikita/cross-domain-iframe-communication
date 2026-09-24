@@ -1,4 +1,0 @@
-/iframe.html
-  Content-Security-Policy: frame-ancestors https://sokolskynikita.github.io
-  Referrer-Policy: no-referrer
-  X-Content-Type-Options: nosniff
